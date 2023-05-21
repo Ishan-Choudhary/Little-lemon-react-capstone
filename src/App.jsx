@@ -1,7 +1,8 @@
 import "./App.css";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Main from "./components/Main";
+import Home from "./components/Home";
+import Reservation from "./components/Reservation";
+import { Routes, Route } from "react-router-dom";
+
 // <li></li>
 // <div>
 // <li>Home</li>
@@ -15,9 +16,10 @@ import Main from "./components/Main";
 function App() {
   return (
     <>
-      <Header />
-      <Main />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/reservation" element={<Reservation />}></Route> /
+      </Routes>
     </>
   );
 }

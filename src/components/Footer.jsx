@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer>
@@ -6,12 +8,24 @@ const Footer = () => {
         style={{ width: "162px", height: "279px", border: "solid 1px black" }}
       ></div>
       <div className="doormat-nav">
-        <p>Home</p>
-        <p>About</p>
-        <p>Menu</p>
-        <p>Reservation</p>
-        <p>Order Online</p>
-        <p>Login</p>
+        <Link to="/">
+          <p>Home</p>
+        </Link>
+        <Link to="/">
+          <p>About</p>
+        </Link>
+        <Link to="/">
+          <p>Menu</p>
+        </Link>
+        <Link to="/reservation">
+          <p>Reservations</p>
+        </Link>
+        <Link to="/">
+          <p>Order Online</p>
+        </Link>
+        <Link to="/">
+          <p>Login</p>
+        </Link>
       </div>
       <div className="contact">
         <p>Address</p>
