@@ -1,5 +1,4 @@
 import Header from "./Header";
-import Footer from "./Footer";
 
 const Reservation = () => {
   return (
@@ -31,9 +30,8 @@ const Reservation = () => {
             }}
           ></div>
         </div>
-				<br />
+        <br />
       </article>
-      <Footer />
     </div>
   );
 };

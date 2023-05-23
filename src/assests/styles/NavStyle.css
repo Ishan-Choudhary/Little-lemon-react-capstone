@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@500;700&display=swap");
+
+nav {
+  position: relative;
+}
+
+.nav {
+  width: 700px;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: space-evenly;
+}
+
+.nav > a {
+  text-decoration: none;
+  color: black;
+  font-family: Karla, sans-serif;
+  font-size: 16pt;
+}
+
+.navMenu {
+  display: none;
+}
+
+.dropdown {
+  display: none;
+}
+
+@media only screen and (max-width: 780px) {
+  .nav {
+    display: none;
+  }
+
+  .navMenu {
+    display: flex;
+    margin-top: 14px;
+  }
+
+  .dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #495357;
+    width: fit-content;
+    padding: 0px 36vw 10px 36vw;
+    position: absolute;
+    translate: -84vw;
+  }
+
+  .dropdown > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-bottom: solid 1px #edefee;
+    width: 100%;
+  }
+
+  .dropdown > div > a {
+    text-decoration: none;
+    color: #edefee;
+  }
+
+  .dropdown > div > a > h4 {
+    margin: 20px 0px;
+    font-family: Karla, sans-serif;
+    font-size: 18pt;
+    font-weight: 800;
+  }
+}
