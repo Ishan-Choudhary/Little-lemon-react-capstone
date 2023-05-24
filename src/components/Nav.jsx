@@ -46,7 +46,7 @@ const Nav = () => {
                 transition: "transform 1s",
               }
             : {
-                transform: "translateY(-100vh)",
+                transform: "translateY(-200vh)",
                 transition: "transform 1s",
               }
         }

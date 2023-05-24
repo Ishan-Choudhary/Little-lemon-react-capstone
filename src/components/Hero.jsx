@@ -1,19 +1,31 @@
 import HeroImage from "../assests/images/restauranfood.jpg";
+import "../assests/styles/HeroStyle.css";
+import PrimaryBtn from "./Button/PrimaryBtn";
 
 const Hero = () => {
+  const imageStyle = {};
+
   return (
-    <article>
+    <article className="hero-bg">
       <section className="hero-section">
         <h1>Little Lemon</h1>
         <h2>Chicago</h2>
-        <p>
-          We are a family owned Mediterranean restaurant focused on traditional
-          recipes served with a modern twist
-        </p>
-        <button>Reserve a Table</button>
+        <div className={"hero-about"}>
+          <p>
+            We are a family owned Mediterranean restaurant focused on
+            traditional recipes served with a modern twist
+          </p>
+        </div>
+        <PrimaryBtn content="Reserve a Table" />
       </section>
       <figure>
-        <img src={HeroImage} alt="Restaurant food" width={364} height={434} />
+        <img
+          src={HeroImage}
+          alt="Restaurant food"
+          width={364}
+          height={434}
+          className={"hero-img"}
+        />
       </figure>
     </article>
   );
