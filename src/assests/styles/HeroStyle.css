@@ -2,13 +2,13 @@
   background-color: #495e57;
   width: 100vw;
   margin-top: 10px;
+  margin-bottom: 10px;
 
   display: grid;
   grid-template-areas: "textArea heroImage";
   justify-items: center;
   align-items: center;
   position: absolute;
-  z-index: -1;
 }
 
 .hero-bg > * {
@@ -57,7 +57,7 @@
 .hero-img {
   position: relative;
   top: 70px;
-  right: 80px;
+  right: 200px;
 
   grid-area: heroImage;
   border: solid 1px black;
@@ -89,6 +89,6 @@
 
   .hero-img {
     right: 0px;
-    left: 17px;
+    left: 3px;
   }
 }

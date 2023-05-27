@@ -8,7 +8,7 @@ const Header = () => {
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-around",
-        alignItems: "center;",
+        alignItems: "center",
       }}
     >
       <img src={Logo} alt="Little lemon logo" />
