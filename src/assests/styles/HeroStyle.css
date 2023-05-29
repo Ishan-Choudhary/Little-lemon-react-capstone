@@ -23,7 +23,20 @@
   margin-top: 10px;
 }
 
-/* TODO: CREATE GRID-ITEM CLASS AND WRAP HERO-SECTION IN IT */
+.hero-section > button {
+  margin-top: 40px;
+  align-self: left;
+}
+
+.hero-img {
+  position: relative;
+  top: 70px;
+  right: 170px;
+
+  grid-area: heroImage;
+  border: solid 1px black;
+  border-radius: 16px;
+}
 
 @media only screen and (min-width: 320px) {
   .hero-bg {
@@ -46,7 +59,7 @@
 
   .hero-section {
     width: 100%;
-    margin-left: 50px;
+    margin-left: 20px;
   }
 
   .hero-section > h1 {
@@ -63,7 +76,7 @@
   }
 }
 
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 1024px) {
   .hero-bg {
     background-color: #495e57;
     width: 100vw;
@@ -88,20 +101,5 @@
     align-content: left;
     width: 100%;
     grid-area: textArea;
-  }
-
-  .hero-section > button {
-    margin-top: 40px;
-    align-self: left;
-  }
-
-  .hero-img {
-    position: relative;
-    top: 70px;
-    right: 170px;
-
-    grid-area: heroImage;
-    border: solid 1px black;
-    border-radius: 16px;
   }
 }
