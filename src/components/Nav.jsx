@@ -42,12 +42,12 @@ const Nav = () => {
           isClicked
             ? {
                 visibility: "visible",
-                transform: "translateY(-30px)",
-                transition: "transform 1s",
+                transform: "translateY(-40px)",
+                transition: "transform 0.5s",
               }
             : {
-                transform: "translateY(-200vh)",
-                transition: "transform 1s",
+                transform: "translateY(-80vh)",
+                transition: "transform 0.5s",
               }
         }
       >

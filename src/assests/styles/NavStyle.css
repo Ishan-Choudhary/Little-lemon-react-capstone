@@ -1,32 +1,4 @@
-nav {
-  position: relative;
-}
-
-.nav {
-  width: 700px;
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
-  justify-content: space-evenly;
-  margin-top: 6px;
-}
-
-.nav > a {
-  text-decoration: none;
-  color: black;
-  font-family: Karla, sans-serif;
-  font-size: 16pt;
-}
-
-.navMenu {
-  display: none;
-}
-
-.dropdown {
-  display: none;
-}
-
-@media only screen and (max-width: 780px) {
+@media only screen and (min-width: 320px) {
   .nav {
     display: none;
   }
@@ -45,6 +17,8 @@ nav {
     padding: 0px 36vw 10px 36vw;
     position: absolute;
     translate: -84vw;
+
+    z-index: 10;
   }
 
   .dropdown > div {
@@ -65,5 +39,35 @@ nav {
     font-family: Karla, sans-serif;
     font-size: 18pt;
     font-weight: 800;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  nav {
+    position: relative;
+  }
+
+  .nav {
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-evenly;
+    margin-top: 6px;
+  }
+
+  .nav > a {
+    text-decoration: none;
+    color: black;
+    font-family: Karla, sans-serif;
+    font-size: 16pt;
+  }
+
+  .navMenu {
+    display: none;
+  }
+
+  .dropdown {
+    display: none;
   }
 }

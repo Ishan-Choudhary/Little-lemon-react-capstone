@@ -12,7 +12,6 @@ const Main = () => {
     <main>
       <Header />
       <Hero />
-      <div style={{ height: "550px" }}></div>
       <Specials />
     </main>
   );

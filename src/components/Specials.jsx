@@ -2,10 +2,13 @@ import GreekSalad from "../assests/images/greek salad.jpg";
 import Bruchetta from "../assests/images/bruchetta.jpg";
 import LemonDessert from "../assests/images/lemon dessert.jpg";
 
+import "../assests/styles/SpecialsStyle.css";
+
 const Specials = () => {
   return (
     <article>
-      <section>
+      <div className={"cover"} style={{ height: "58vh" }}></div>
+      <section className="specials-header">
         <h1>This weeks specials!</h1>
         <button>Online Menu</button>
       </section>
