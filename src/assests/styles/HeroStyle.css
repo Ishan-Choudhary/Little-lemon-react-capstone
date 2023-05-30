@@ -1,6 +1,6 @@
 .hero-section > h1 {
   font-family: "Markazi Text", serif;
-  font-size: 64pt;
+  font-size: 5rem;
   font-weight: 500;
   line-height: 50pt;
   color: #f4ce14;
@@ -31,7 +31,6 @@
 .hero-img {
   position: relative;
   top: 70px;
-  right: 170px;
 
   grid-area: heroImage;
   border: solid 1px black;
@@ -41,7 +40,7 @@
 @media only screen and (min-width: 320px) {
   .hero-bg {
     background-color: #495e57;
-    width: 100vw;
+    width: fit-content;
     margin-top: 10px;
     margin-bottom: 10px;
 
@@ -50,7 +49,6 @@
     justify-items: center;
     align-items: center;
     position: absolute;
-    padding-right: 50px;
   }
 
   .hero-bg > * {
@@ -58,8 +56,9 @@
   }
 
   .hero-section {
-    width: 100%;
-    margin-left: 20px;
+    width: fit-content;
+    margin-left: 10px;
+    word-wrap: normal;
   }
 
   .hero-section > h1 {
@@ -69,10 +68,11 @@
   .hero-section > h2 {
     align-self: left;
   }
+}
 
+@media only screen and (min-width: 768px) {
   .hero-img {
-    right: 0px;
-    left: 3px;
+    right: 25vw;
   }
 }
 
@@ -101,5 +101,10 @@
     align-content: left;
     width: 100%;
     grid-area: textArea;
+    margin-left: 50px;
+  }
+
+  .hero-img {
+    right: 0px;
   }
 }

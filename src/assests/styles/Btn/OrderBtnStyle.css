@@ -1,0 +1,11 @@
+.order-btn {
+  margin-left: 10px;
+  padding: 10px;
+
+  font-family: Karla, sans-serif;
+  font-size: 16pt;
+  font-weight: 500;
+
+  background-color: transparent;
+  border-radius: 16px;
+}

@@ -1,0 +1,32 @@
+.specials-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media only screen and (min-width: 320px) {
+  .cover {
+    height: 980px;
+  }
+
+  .specials-header {
+    margin: 0px 10px;
+  }
+
+  .specials-header > h1 {
+    font-family: Karla;
+    font-weight: 500;
+    font-size: 20pt;
+  }
+
+  .specials-header > button {
+    width: 170px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .cover {
+    height: 880px;
+  }
+}

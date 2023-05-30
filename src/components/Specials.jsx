@@ -1,75 +1,89 @@
-import GreekSalad from "../assests/images/greek salad.jpg";
-import Bruchetta from "../assests/images/bruchetta.jpg";
-import LemonDessert from "../assests/images/lemon dessert.jpg";
+import { specialsData } from "../assests/data/specials.js";
 
 import "../assests/styles/SpecialsStyle.css";
+import OrderBtn from "./Button/OrderBtn.jsx";
+import PrimaryBtn from "./Button/PrimaryBtn.jsx";
+
+const SpecialsItem = ({ imgUrl, dishName, dishDesc, dishPrice }) => {
+  const cardStyle = {
+    // height: "460px",
+    margin: "20px 10px",
+
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "spaceEvenly",
+    border: "solid 1px black",
+    borderRadius: "16px",
+  };
+
+  const cardTitleStyle = {
+    fontFamily: "Karla, sans-serif",
+    fontWeight: "700",
+    fontSize: "18pt",
+  };
+
+  return (
+    <div style={cardStyle}>
+      <div style={{ height: "186px", overflow: "hidden" }}>
+        <img
+          src={imgUrl}
+          alt={dishName}
+          width={"100%"}
+          style={{ borderTopLeftRadius: "16px", borderTopRightRadius: "16px" }}
+        />
+      </div>
+      <div
+        style={{
+          display: "flex",
+          flex: "1 0 auto",
+          flexDirection: "row",
+          margin: "0px 10px",
+          justifyContent: "space-between",
+        }}
+      >
+        <h2 style={cardTitleStyle}>{dishName}</h2>
+        <h2 style={({ ...cardTitleStyle }, { color: "#ee9972" })}>
+          {dishPrice}
+        </h2>
+      </div>
+      <h3
+        style={{
+          fontFamily: "Karla, sans-serif",
+          fontSize: "16pt",
+          fontWeight: "400",
+          margin: "30px 10px",
+        }}
+      >
+        {dishDesc}
+      </h3>
+      <div style={{ paddingBottom: "20px" }}>
+        <OrderBtn />
+      </div>
+    </div>
+  );
+};
 
 const Specials = () => {
   return (
     <article>
-      <div className={"cover"} style={{ height: "58vh" }}></div>
+      <div className="cover"></div>
       <section className="specials-header">
-        <h1>This weeks specials!</h1>
-        <button>Online Menu</button>
+        <h1>Specials!</h1>
+        <br />
+        <PrimaryBtn content={"Online Menu"} />
       </section>
-      <div>
-        <img
-          src={GreekSalad}
-          alt="Our greek salad"
-          width={264.67}
-          height={182.26}
-        />
-        <div>
-          <div>
-            <h3>Greek salad</h3>
-            <p>$12.99</p>
-          </div>
-          <div>
-            The famous greek salad of crispy lettuce, peppers, olives our
-            Chicago styles feta cheese, garnished with cruncy garlic and
-            rosemary croutons.
-          </div>
-          <button>Order a delivery</button>
-        </div>
-      </div>
-      <div>
-        <img
-          src={Bruchetta}
-          alt="Our Bruchetta"
-          width={264.67}
-          height={182.26}
-        />
-        <div>
-          <div>
-            <h3>Bruchetta</h3>
-            <p>$5.99</p>
-          </div>
-          <div>
-            Our bruschetta is made from grilled bread that has been smeared with
-            garlic and seasoned with salt and olive oil.
-          </div>
-          <button>Order a delivery</button>
-        </div>
-      </div>
-      <div>
-        <img
-          src={LemonDessert}
-          alt="Our lemon dessert"
-          width={264.67}
-          height={182.26}
-        />
-        <div>
-          <div>
-            <h3>Lemon Dessert</h3>
-            <p>$5.00</p>
-          </div>
-          <div>
-            This comes straight from grandoma's recipe book, every last
-            ingredient has been sourced and is as authentic as can be imagined
-          </div>
-          <button>Order a delivery</button>
-        </div>
-      </div>
+
+      <section>
+        {specialsData.map((curr) => (
+          <SpecialsItem
+            key={curr.key}
+            imgUrl={curr.image}
+            dishName={curr.name}
+            dishDesc={curr.description}
+            dishPrice={curr.price}
+          />
+        ))}
+      </section>
     </article>
   );
 };
