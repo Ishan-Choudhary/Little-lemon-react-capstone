@@ -1,16 +1,20 @@
 .hero-section > h1 {
   font-family: "Markazi Text", serif;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 500;
   line-height: 50pt;
   color: #f4ce14;
+
+  margin-left: 35px;
 }
 
 .hero-section > h2 {
   font-family: "Markazi Text", serif;
-  font-size: 40pt;
+  font-size: 30pt;
   font-weight: 400;
   color: white;
+
+  margin-left: 35px;
 }
 
 .hero-about {
@@ -21,11 +25,13 @@
   line-height: 1.5;
   color: white;
   margin-top: 10px;
+  margin-left: 35px;
 }
 
 .hero-section > button {
   margin-top: 40px;
   align-self: left;
+  margin-left: 35px;
 }
 
 .hero-img {
@@ -67,12 +73,6 @@
 
   .hero-section > h2 {
     align-self: left;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .hero-img {
-    right: 25vw;
   }
 }
 

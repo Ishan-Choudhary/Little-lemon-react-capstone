@@ -3,15 +3,13 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+  margin: 0px 35px;
 }
 
 @media only screen and (min-width: 320px) {
   .cover {
     height: 980px;
-  }
-
-  .specials-header {
-    margin: 0px 10px;
   }
 
   .specials-header > h1 {
@@ -28,5 +26,40 @@
 @media only screen and (min-width: 768px) {
   .cover {
     height: 880px;
+  }
+
+  .items-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0px 25px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .cover {
+    height: 550px;
+  }
+
+  .specials-header {
+    margin: 0px 80px;
+  }
+
+  .items-list {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0px 55px;
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  .specials-header {
+    margin: 0px 500px;
+  }
+
+  .items-list {
+    margin: 0px 500px;
+    gap: 100px;
   }
 }

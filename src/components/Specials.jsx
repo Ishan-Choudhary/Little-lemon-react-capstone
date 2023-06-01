@@ -73,7 +73,7 @@ const Specials = () => {
         <PrimaryBtn content={"Online Menu"} />
       </section>
 
-      <section>
+      <section className="items-list">
         {specialsData.map((curr) => (
           <SpecialsItem
             key={curr.key}
