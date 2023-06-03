@@ -1,65 +1,33 @@
+import { useState, useEffect } from "react";
+
+const Results = ({ person }) => <h1>{person.name.first}</h1>;
+
 const Testimonials = () => {
+  const [usersData, setUsersData] = useState([]);
+
+  useEffect(() => {
+    const promises = [
+      fetch("https://randomuser.me/api/?inc=name,picture")
+        .then((resp) => resp.json())
+        .then((data) => data.results[0]),
+      fetch("https://randomuser.me/api/?inc=name,picture")
+        .then((resp) => resp.json())
+        .then((data) => data.results[0]),
+      fetch("https://randomuser.me/api/?inc=name,picture")
+        .then((resp) => resp.json())
+        .then((data) => data.results[0]),
+    ];
+
+    Promise.all(promises).then((res) => setUsersData(res));
+  }, []);
+
   return (
     <article>
       <h2>Testimonials</h2>
-      <div>
-        <div>
-          <p>Rating </p>
-          <div>
-            <div
-              style={{
-                border: "solid 1px black",
-                padding: "25px",
-                width: "10px",
-              }}
-            ></div>
-            <p>Name</p>
-          </div>
-          <p>Review text</p>
-        </div>
-        <div>
-          <p>Rating </p>
-          <div>
-            <div
-              style={{
-                border: "solid 1px black",
-                padding: "25px",
-                width: "10px",
-              }}
-            ></div>
-            <p>Name</p>
-          </div>
-          <p>Review text</p>
-        </div>
-        <div>
-          <p>Rating </p>
-          <div>
-            <div
-              style={{
-                border: "solid 1px black",
-                padding: "25px",
-                width: "10px",
-              }}
-            ></div>
-            <p>Name</p>
-          </div>
-          <p>Review text</p>
-        </div>
-        <div>
-          <p>Rating </p>
-          <div>
-            <div
-              style={{
-                border: "solid 1px black",
-                padding: "25px",
-                width: "10px",
-              }}
-            ></div>
-            <p>Name</p>
-          </div>
-          <p>Review text</p>
-        </div>
-      </div>
+      {usersData.map((curr, i) => (
+        <Results key={i} person={curr} />
+        // JUST FORMAT ABOVE DATA NOW EFFECT HOOK RUN TWICE
+      ))}
     </article>
   );
 };
