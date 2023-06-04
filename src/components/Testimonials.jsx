@@ -58,9 +58,11 @@ const Testimonials = () => {
         .then((data) => data.results[0]),
     ];
 
-    Promise.all(promises).then((res) => {
-      setUsersData(res);
-    });
+    Promise.all(promises)
+      .then((res) => {
+        setUsersData(res);
+      })
+      .catch((err) => console.log(err));
   }, []);
 
   return (
