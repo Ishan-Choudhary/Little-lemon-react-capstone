@@ -69,7 +69,6 @@ const Testimonials = () => {
       <div className="testimonial-cards">
         {usersData.map((curr, i) => (
           <Results key={i} person={curr} message={testimonials[i]} />
-          // JUST FORMAT ABOVE DATA NOW EFFECT HOOK RUN TWICE
         ))}
       </div>
     </article>
