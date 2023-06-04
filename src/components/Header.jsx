@@ -1,15 +1,42 @@
 import Nav from "./Nav";
 import Logo from "../assests/images/Logo.svg";
 
+import { useState, useEffect } from "react";
+
 const Header = () => {
+  const [sticky, setSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setSticky(window.scrollY > 300);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <header
-      style={{
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-around",
-        alignItems: "center",
-      }}
+      style={
+        sticky
+          ? {
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-around",
+              alignItems: "center",
+              position: "sticky",
+              top: "0",
+              zIndex: "10000",
+              backgroundColor: "#d9d9d9",
+              paddingBottom: "10px",
+            }
+          : {
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-around",
+              alignItems: "center",
+            }
+      }
     >
       <img src={Logo} alt="Little lemon logo" />
       <Nav />
