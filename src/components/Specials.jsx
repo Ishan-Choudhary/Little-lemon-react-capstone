@@ -1,4 +1,4 @@
-import { specialsData } from "../assests/data/specials.js";
+import { specialsData } from "../assests/data/specialsData.js";
 
 import "../assests/styles/SpecialsStyle.css";
 import OrderBtn from "./Button/OrderBtn.jsx";

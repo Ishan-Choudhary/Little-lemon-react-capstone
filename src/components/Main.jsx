@@ -1,10 +1,8 @@
+import Header from "./Header";
 import Hero from "./Hero";
 import Specials from "./Specials";
-// import Testimonials from "./Testimonials";
-// import AboutMe from "./AboutMe";
-import Header from "./Header";
+import Testimonials from "./Testimonials";
 
-// <Specials />
 // <Testimonials />
 // <AboutMe />
 const Main = () => {
@@ -13,6 +11,7 @@ const Main = () => {
       <Header />
       <Hero />
       <Specials />
+      <Testimonials />
     </main>
   );
 };
