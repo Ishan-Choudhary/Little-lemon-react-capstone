@@ -4,17 +4,18 @@
   align-items: center;
   background: #d9d9d9;
 
-  padding: 10px 0px;
+  padding: 40px 0px;
 }
 
 .testimonial-bg > h2 {
   font-family: Karl, sans-serif;
   font-size: 20pt;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .testimonial-cards {
+  margin-top: -20px;
   display: grid;
 }
 
