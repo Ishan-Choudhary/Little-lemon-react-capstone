@@ -1,8 +1,9 @@
+import Footer from "./Footer";
 import Header from "./Header";
 
 const Reservation = () => {
   return (
-    <div>
+    <main style={{ height: "100vh" }}>
       <Header />
       <article>
         <form method="get">
@@ -32,7 +33,8 @@ const Reservation = () => {
         </div>
         <br />
       </article>
-    </div>
+      <Footer />
+    </main>
   );
 };
 
