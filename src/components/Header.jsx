@@ -27,8 +27,9 @@ const Header = () => {
               position: "sticky",
               top: "0",
               zIndex: "10000",
-              backgroundColor: "#d9d9d9",
+              backgroundColor: "#fbdabb",
               paddingBottom: "10px",
+              height: "fit-content",
             }
           : {
               display: "flex",
