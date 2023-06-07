@@ -1,0 +1,88 @@
+.form-bg {
+  background-color: #495e57;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-bg h1 {
+  font-family: Karla, sans-serif;
+  font-size: 40pt;
+  font-weight: 700;
+  color: white;
+}
+
+.form-comp {
+  margin: 90px 70px;
+}
+
+@media only screen and (min-width: 320px) {
+  .form-bg > h1 {
+    margin-bottom: -40px;
+  }
+
+  .form-comp {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    row-gap: 20px;
+  }
+
+  .form-comp > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-comp > div > label {
+    margin-bottom: 10px;
+
+    font-family: Karla, sans-serif;
+    font-weight: 500;
+    font-size: 18pt;
+    color: white;
+  }
+
+  .form-comp > div > input {
+    border-radius: 16px;
+    padding: 10px;
+    font-size: 14pt;
+  }
+
+  .form-comp > div > select {
+    border-radius: 16px;
+    padding: 10px;
+    font-size: 14pt;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .form-comp {
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 50px;
+    row-gap: 40px;
+  }
+
+  .form-comp > div {
+    width: fit-content;
+  }
+
+  .form-comp > div > input {
+    width: 150px;
+  }
+
+  .form-comp > div > select {
+    width: 250px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .form-comp {
+    display: grid;
+    column-gap: 150px;
+  }
+}

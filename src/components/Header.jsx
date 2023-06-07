@@ -3,6 +3,8 @@ import Logo from "../assests/images/Logo.svg";
 
 import { useState, useEffect } from "react";
 
+import { Link } from "react-router-dom";
+
 const Header = () => {
   const [sticky, setSticky] = useState(false);
 
@@ -36,10 +38,13 @@ const Header = () => {
               flexDirection: "row",
               justifyContent: "space-around",
               alignItems: "center",
+              backgroundColor: "#edefee",
             }
       }
     >
-      <img src={Logo} alt="Little lemon logo" />
+      <Link to="/">
+        <img src={Logo} alt="Little lemon logo" />
+      </Link>
       <Nav />
     </header>
   );
