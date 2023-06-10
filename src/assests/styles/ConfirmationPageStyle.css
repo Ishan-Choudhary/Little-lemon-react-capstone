@@ -1,0 +1,23 @@
+.confirm-head {
+  font-family: Karla, sans-serif;
+  font-size: 20pt;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.confirm-sub {
+  font-family: Karla, sans-serif;
+  font-size: 12pt;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+@media only screen and (min-width: 1440px) {
+  .confirm-head {
+    font-size: 30pt;
+  }
+
+  .confirm-sub {
+    font-size: 20pt;
+  }
+}

@@ -1,17 +1,8 @@
 import "./App.css";
 import Home from "./components/Home";
 import Reservation from "./components/Reservation";
+import ConfirmationPage from "./components/ConfirmationPage";
 import { Routes, Route } from "react-router-dom";
-
-// <li></li>
-// <div>
-// <li>Home</li>
-// <li>About</li>
-// <li>Menu</li>
-// <li>Reservations</li>
-// <li>Order online</li>
-// <li>Login</li>
-// </div>
 
 function App() {
   return (
@@ -19,6 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/reservation" element={<Reservation />}></Route>
+        <Route path="/confirmation" element={<ConfirmationPage />}></Route>
       </Routes>
     </>
   );
