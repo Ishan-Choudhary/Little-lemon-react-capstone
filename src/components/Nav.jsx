@@ -12,25 +12,26 @@ const Nav = () => {
     <nav>
       <ul className={"nav"}>
         <Link to="/">
-          <li>Home</li>
+          <li aria-label="Home">Home</li>
         </Link>
         <Link to="/">
-          <li>About</li>
+          <li aria-label="About">About</li>
         </Link>
         <Link to="/">
-          <li>Menu</li>
+          <li aria-label="Menu">Menu</li>
         </Link>
         <Link to="/reservation">
-          <li>Reservations</li>
+          <li aria-label="Reservation">Reservations</li>
         </Link>
         <Link to="/">
-          <li>Order Online</li>
+          <li aria-label="Order Online">Order Online</li>
         </Link>
         <Link to="/">
-          <li>Login</li>
+          <li aria-label="Login">Login</li>
         </Link>
       </ul>
       <FontAwesomeIcon
+        aria-label="Menu"
         icon={isClicked ? faX : faBars}
         className={"navMenu"}
         onClick={() => setIsClicked(!isClicked)}
@@ -52,6 +53,7 @@ const Nav = () => {
         }
       >
         <FontAwesomeIcon
+          aria-label="Menu"
           icon={isClicked ? faX : faBars}
           className={"navMenu"}
           onClick={() => setIsClicked(!isClicked)}

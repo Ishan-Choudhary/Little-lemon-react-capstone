@@ -71,13 +71,19 @@ const BookingForm = ({ timeDispatcher, givenTimes, submitFn }) => {
             value={choosenDate}
             required
             onChange={handleDateChange}
+            aria-label="Date"
           />
         </div>
         <div>
           <label htmlFor="time" value={choosenTime}>
             Select a Time
           </label>
-          <select id="time" onChange={handleTimeChange} required>
+          <select
+            id="time"
+            aria-label="Time"
+            onChange={handleTimeChange}
+            required
+          >
             {givenTimes.flat().map((curr, i) => (
               <option key={i} value={curr}>
                 {curr}
@@ -93,6 +99,7 @@ const BookingForm = ({ timeDispatcher, givenTimes, submitFn }) => {
             placeholder="Keep between 1 to 10"
             min="1"
             max="10"
+            aria-label="Guest Number"
             value={guestNum}
             required
             onChange={handleGuestNumChange}
@@ -102,7 +109,11 @@ const BookingForm = ({ timeDispatcher, givenTimes, submitFn }) => {
           <label value={occasion} htmlFor="occasion">
             Choose an Occasion
           </label>
-          <select id="occasion" onChange={handleOccasionChange}>
+          <select
+            id="occasion"
+            onChange={handleOccasionChange}
+            aria-label="Occasion"
+          >
             {occasionList.map((curr, i) => (
               <option key={i} value={curr}>
                 {curr}
@@ -110,7 +121,11 @@ const BookingForm = ({ timeDispatcher, givenTimes, submitFn }) => {
             ))}
           </select>
         </div>
-        <PrimaryBtn content={"Submit Form"} onClick={handleSubmit} />
+        <PrimaryBtn
+          content={"Submit Form"}
+          onClick={handleSubmit}
+          aria-label="Submit table booking request"
+        />
       </form>
     </article>
   );

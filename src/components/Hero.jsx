@@ -17,7 +17,7 @@ const Hero = () => {
               traditional recipes served with a modern twist
             </p>
           </div>
-          <Link to="/reservation">
+          <Link aria-label="Reserve a Table" to="/reservation">
             <PrimaryBtn content="Reserve a Table" />
           </Link>
         </section>
