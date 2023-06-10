@@ -2,6 +2,8 @@ import HeroImage from "../assests/images/restauranfood.jpg";
 import "../assests/styles/HeroStyle.css";
 import PrimaryBtn from "./Button/PrimaryBtn";
 
+import { Link } from "react-router-dom";
+
 const Hero = () => {
   return (
     <article className="hero-bg">
@@ -15,7 +17,9 @@ const Hero = () => {
               traditional recipes served with a modern twist
             </p>
           </div>
-          <PrimaryBtn content="Reserve a Table" />
+          <Link to="/reservation">
+            <PrimaryBtn content="Reserve a Table" />
+          </Link>
         </section>
       </div>
       <figure>

@@ -1,7 +1,11 @@
 import "../../assests/styles/Btn/PrimaryBtnStyle.css";
 
-const PrimaryBtn = ({ content }) => {
-  return <button className="primary-btn">{content}</button>;
+const PrimaryBtn = ({ content, onClick }) => {
+  return (
+    <button className="primary-btn" onClick={onClick}>
+      {content}
+    </button>
+  );
 };
 
 export default PrimaryBtn;
